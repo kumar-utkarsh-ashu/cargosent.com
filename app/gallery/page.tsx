@@ -70,7 +70,7 @@ export default function GalleryPage() {
               <div
                 key={item.id}
                 onClick={() => setSelectedPhoto(item)}
-                className="group relative bg-slate-900 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/3]"
+                className="group relative bg-slate-100 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 aspect-[4/3] border border-slate-200"
               >
                 <Image
                   src={item.imageUrl}
@@ -79,28 +79,9 @@ export default function GalleryPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent z-10" />
-
-                {/* Category badge */}
-                <div className="absolute top-4 left-4 z-20">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-white bg-brand/90 px-3 py-1 rounded-full border border-white/20">
-                    {item.categoryLabel}
-                  </span>
-                </div>
-
                 {/* Hover zoom trigger icon */}
-                <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity bg-white/20 backdrop-blur-sm p-2 rounded-full text-white">
+                <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-sm p-2 rounded-full text-white">
                   <Maximize2 className="w-4 h-4" />
-                </div>
-
-                {/* Bottom title and description */}
-                <div className="absolute bottom-4 inset-x-4 z-20">
-                  <h3 className="text-base font-bold text-white group-hover:text-blue-300 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-xs text-slate-300 line-clamp-2">
-                    {item.description}
-                  </p>
                 </div>
               </div>
             ))}

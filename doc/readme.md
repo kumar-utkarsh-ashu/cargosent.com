@@ -70,3 +70,12 @@ Every change and development phase adheres strictly to the IMET framework:
 - Version 5.0.0 (2026-11-18): Investigated Vercel 404 NOT_FOUND. Identified that the initial Vercel project was created when the GitHub repo had only an empty README, causing Vercel to cache Framework Preset as "Other" static instead of Next.js.
 - Version 5.1.0 (2026-11-18): Added vercel.json with explicit Next.js framework configuration, buildCommand, and installCommand. Documented 1-click Vercel redeployment resolution in doc/deployment.md. Verified ASCII compliance.
 - Version 6.0.0 (2026-11-18): Updated all site-wide phone numbers to +86 138 1829 2991 and all email addresses to info@cargosent.com per client feedback. Ensured single-source-of-truth consistency across Header, Footer, Lead Banner, Contact Page, and documentation. Verified ASCII compliance.
+- Version 7.0.0 (2026-11-18): Incorporated comprehensive client feedback from Home.docx, Solutions.docx, and Contact.docx:
+  1. Header: Removed top announcement micro-bar per client directive ("leave it empty, we don't need this information on top").
+  2. Hero Slider: Standardized all slides to feature the signature headline "Your CARGO We SENT" with subtext.
+  3. Home Page Flow: Removed MetricsBar and CorporateIntro blocks from Home page flow to match prototype http://47.95.200.163/ where Hero slider directly transitions to Latest Highlights and Our Solutions. CorporateIntro retained on About page.
+  4. Latest Highlights and Gallery: Updated title casing to "Latest Highlights" (only initial letters capitalized) and stripped all overlay tags, badges, and descriptions from photos so only clean photos are displayed.
+  5. Footer: Removed physical office address and working hours, keeping only telephone (+86 138 1829 2991) and email (info@cargosent.com).
+  6. Solutions Page: Centered section headings and introductions, removed floating white icon overlay from photos, and stripped "SOLUTION 01" numbering tags.
+  7. Contact Page: Removed physical office address and operating hours cards, preserving direct phone, email, and hashtag contacts.
+  8. Verified production build and responsive rendering across desktop and mobile. Verified ASCII compliance.

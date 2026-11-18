@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight, Phone } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { companyData } from "@/data/company";
 
 interface NavItem {
@@ -26,24 +26,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
-      {/* Top micro announcement bar */}
-      <div className="bg-brand-dark text-slate-300 text-xs py-1.5 px-4 hidden md:block">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-6">
-            <span>Specialist Freight Forwarder Established 2017</span>
-            <span>Headquartered in Shanghai, China</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="flex items-center">
-              <Phone className="w-3.5 h-3.5 mr-1 text-slate-300" />
-              {companyData.phone}
-            </span>
-            <span className="text-slate-400">|</span>
-            <span className="font-semibold text-white tracking-wider">{companyData.hashtag}</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main navigation bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">

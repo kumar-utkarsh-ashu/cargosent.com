@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { companyData } from "@/data/company";
 import { solutionsData } from "@/data/solutions";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -91,13 +91,9 @@ export default function Footer() {
           {/* Column 4: Contact Information */}
           <div className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-wider text-white border-b border-slate-800 pb-3 mb-6">
-              Shanghai Headquarters
+              Contact
             </h3>
             <div className="space-y-3 text-sm text-slate-400">
-              <div className="flex items-start">
-                <MapPin className="w-4 h-4 mr-3 mt-1 text-blue-400 flex-shrink-0" />
-                <span>{companyData.address}</span>
-              </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
                 <a
@@ -115,10 +111,6 @@ export default function Footer() {
                 >
                   {companyData.email}
                 </a>
-              </div>
-              <div className="flex items-start">
-                <Clock className="w-4 h-4 mr-3 mt-1 text-blue-400 flex-shrink-0" />
-                <span>{companyData.operatingHours}</span>
               </div>
             </div>
           </div>

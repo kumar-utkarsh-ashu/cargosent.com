@@ -65,7 +65,7 @@ export default function SolutionsPage() {
                   {/* Visual Photo & Details Card */}
                   <div className={`lg:col-span-5 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                     <div className="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-sm">
-                      {/* Authentic Solution Photography */}
+                      {/* Authentic Solution Photography - Clean Photo without Icon Overlay */}
                       <div className="relative h-64 w-full bg-slate-800">
                         <Image
                           src={solution.photoPath}
@@ -73,21 +73,9 @@ export default function SolutionsPage() {
                           fill
                           className="object-cover"
                         />
-                        <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-sm p-2 rounded-xl shadow-sm border border-slate-200">
-                          <Image
-                            src={solution.iconPath}
-                            alt=""
-                            width={36}
-                            height={36}
-                            className="object-contain"
-                          />
-                        </div>
                       </div>
 
-                      <div className="p-8">
-                        <span className="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-2">
-                          Solution 0{idx + 1}
-                        </span>
+                      <div className="p-8 text-center">
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">
                           {solution.title}
                         </h3>

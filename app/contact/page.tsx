@@ -5,14 +5,11 @@ import { useSearchParams } from "next/navigation";
 import { companyData } from "@/data/company";
 import { solutionsData } from "@/data/solutions";
 import {
-  MapPin,
   Phone,
   Mail,
-  Clock,
   Send,
   CheckCircle2,
   AlertCircle,
-  Building,
 } from "lucide-react";
 
 function ContactForm() {
@@ -261,18 +258,6 @@ export default function ContactPage() {
               <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 rounded-xl bg-blue-100/60 border border-blue-200 flex items-center justify-center flex-shrink-0 text-brand">
-                    <Building className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                      Office Address
-                    </h3>
-                    <p className="text-sm text-slate-600 mt-1">{companyData.address}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-100/60 border border-blue-200 flex items-center justify-center flex-shrink-0 text-brand">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -303,18 +288,6 @@ export default function ContactPage() {
                         {companyData.email}
                       </a>
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-100/60 border border-blue-200 flex items-center justify-center flex-shrink-0 text-brand">
-                    <Clock className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                      Operating Hours
-                    </h3>
-                    <p className="text-sm text-slate-600 mt-1">{companyData.operatingHours}</p>
                   </div>
                 </div>
               </div>

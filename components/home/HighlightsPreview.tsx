@@ -7,64 +7,26 @@ import { highlightsData, HighlightItem } from "@/data/highlights";
 import { ArrowRight, Maximize2, X } from "lucide-react";
 
 export default function HighlightsPreview() {
-  const [activeTab, setActiveTab] = useState<string>("all");
   const [selectedPhoto, setSelectedPhoto] = useState<HighlightItem | null>(null);
-
-  const filterTabs = [
-    { key: "all", label: "All Highlights" },
-    { key: "motorsports", label: "Events & Motorsports" },
-    { key: "air", label: "Air Cargo" },
-    { key: "maritime", label: "Ocean Cargo" },
-    { key: "freight", label: "Heavy Linehaul" },
-  ];
-
-  const filteredItems =
-    activeTab === "all"
-      ? highlightsData
-      : highlightsData.filter((item) => item.category === activeTab);
+  const items = highlightsData.slice(0, 9);
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand bg-blue-50 border border-blue-200 px-3.5 py-1 rounded-full">
-            Operations Portfolio
-          </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            LATEST HIGHLIGHTS
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Latest Highlights
           </h2>
-          <p className="mt-3 text-sm text-slate-600">
-            Authentic operational photography from our Shanghai airside ramp handovers, maritime
-            crane lifts, and race circuit logistics.
-          </p>
-
-          {/* Filter Bar */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {filterTabs.map((tab) => (
-              <button
-                key={tab.key}
-                type="button"
-                onClick={() => setActiveTab(tab.key)}
-                className={`px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all ${
-                  activeTab === tab.key
-                    ? "bg-brand text-white shadow-sm"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* 3x3 Highlights Grid */}
+        {/* 3x3 Highlights Grid - Clean Photo Grid per Client Directive */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {items.map((item) => (
             <div
               key={item.id}
               onClick={() => setSelectedPhoto(item)}
-              className="group relative bg-slate-900 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 aspect-[4/3]"
+              className="group relative bg-slate-100 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 aspect-[4/3] border border-slate-200"
             >
               <Image
                 src={item.imageUrl}
@@ -73,28 +35,9 @@ export default function HighlightsPreview() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-
-              {/* Top Category Badge */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-white bg-brand/90 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/20">
-                  {item.categoryLabel}
-                </span>
-              </div>
-
-              {/* Hover Zoom Icon */}
-              <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity bg-white/20 backdrop-blur-sm p-2 rounded-full text-white">
+              {/* Hover Zoom Indicator */}
+              <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-sm p-2 rounded-full text-white">
                 <Maximize2 className="w-4 h-4" />
-              </div>
-
-              {/* Bottom Caption */}
-              <div className="absolute bottom-4 inset-x-4 z-10">
-                <h3 className="text-base font-bold text-white group-hover:text-blue-300 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="mt-1 text-xs text-slate-300 line-clamp-1">
-                  {item.description}
-                </p>
               </div>
             </div>
           ))}
