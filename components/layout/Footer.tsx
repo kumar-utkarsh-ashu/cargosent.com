@@ -100,7 +100,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />
-                <span>{companyData.phone}</span>
+                <a
+                  href={`tel:${companyData.phone}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {companyData.phone}
+                </a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" />

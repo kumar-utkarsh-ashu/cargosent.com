@@ -142,7 +142,7 @@ function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+86 21 0000 0000"
+            placeholder="+86 138 1829 2991"
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand text-sm"
           />
         </div>
@@ -277,10 +277,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                      Telephone Lines
+                      Telephone
                     </h3>
-                    <p className="text-sm text-slate-600 mt-1">{companyData.phone}</p>
-                    <p className="text-sm text-slate-600">{companyData.phoneAlt}</p>
+                    <p className="text-sm text-slate-600 mt-1">
+                      <a href={`tel:${companyData.phone}`} className="hover:text-brand transition-colors">
+                        {companyData.phone}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -290,10 +293,16 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                      Direct Email
+                      Email Address
                     </h3>
-                    <p className="text-sm text-slate-600 mt-1">{companyData.email}</p>
-                    <p className="text-sm text-slate-600">{companyData.inquiriesEmail}</p>
+                    <p className="text-sm text-slate-600 mt-1">
+                      <a
+                        href={`mailto:${companyData.email}`}
+                        className="hover:text-brand transition-colors"
+                      >
+                        {companyData.email}
+                      </a>
+                    </p>
                   </div>
                 </div>
 

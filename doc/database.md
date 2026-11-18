@@ -15,7 +15,7 @@ Captures customer inquiry submissions from the Contact form and universal lead b
   "fullName": "John Doe",
   "email": "johndoe@example.com",
   "company": "Pacific Trade Ltd",
-  "phone": "+86 21 5555 0199",
+  "phone": "+86 138 1829 2991",
   "serviceRequired": "Air Freight",
   "origin": "Shanghai, China",
   "destination": "Melbourne, Australia",
