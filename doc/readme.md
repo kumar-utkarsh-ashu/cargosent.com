@@ -79,3 +79,9 @@ Every change and development phase adheres strictly to the IMET framework:
   6. Solutions Page: Centered section headings and introductions, removed floating white icon overlay from photos, and stripped "SOLUTION 01" numbering tags.
   7. Contact Page: Removed physical office address and operating hours cards, preserving direct phone, email, and hashtag contacts.
   8. Verified production build and responsive rendering across desktop and mobile. Verified ASCII compliance.
+- Version 8.0.0 (2026-11-18): Layout realignment and section restoration based on direct client clarification:
+  1. Home Page Structure: Restored MetricsBar (IMAGE 1: 2017 Established, 20+ Years, 6 Modes) and CorporateIntro (IMAGE 2 and 3: "WHO WE ARE" overview and "Our Operational Commitments").
+  2. Small and Big Heading Mix: Restored the small pill badge above the large headline hierarchy on both SolutionsGrid (IMAGE 4: "OUR SOLUTIONS" badge + "Comprehensive Multimodal Forwarding") and HighlightsPreview (IMAGE 5: "OPERATIONS PORTFOLIO" badge + "Latest Highlights").
+  3. Preserved clean photo cards in Highlights without overlay clutter per earlier client directive.
+  4. Verified consistent phone (+86 138 1829 2991) and email (info@cargosent.com) in all restored components.
+  5. Tested production build and verified all routes return HTTP 200. Verified ASCII compliance.
