@@ -28,9 +28,16 @@ For team collaboration and client review previews:
   - NEXT_PUBLIC_SITE_URL: Staging domain URL
 
 ### Vercel Deployment
-- Framework Preset: Next.js
-- Root Directory: ./
-- Auto-detected build commands execute "npm run build" cleanly with serverless edge caching.
+- Framework Preset: Next.js (defined in vercel.json)
+- Root Directory: ./ (Root)
+- Build Command: npm run build
+- Output Directory: .next
+- Resolving 404 NOT_FOUND on Vercel:
+  If a project was imported into Vercel prior to pushing the Next.js files, Vercel caches the framework preset as "Other" (static). To resolve:
+  1. Open Vercel Project Dashboard -> Settings -> General.
+  2. Set "Framework Preset" to "Next.js" (or let vercel.json handle it).
+  3. Ensure "Root Directory" is set to "./".
+  4. Navigate to "Deployments" tab -> Click (...) on latest deployment -> Click "Redeploy".
 
 ## 3. Mobrilz Staging Environment Review
 - Purpose: Client review of full responsive behavior (desktop, tablet, mobile), flip-card animations, accordion usability, and lead inquiry submission.
