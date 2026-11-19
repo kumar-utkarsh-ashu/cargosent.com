@@ -108,12 +108,11 @@ export default function GalleryPage() {
               <X className="w-5 h-5" />
             </button>
 
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-3">
               {selectedPhoto.categoryLabel}
             </span>
-            <h3 className="text-xl font-bold mb-4">{selectedPhoto.title}</h3>
 
-            <div className="relative h-96 w-full rounded-xl overflow-hidden mb-4 border border-slate-800">
+            <div className="relative h-96 w-full rounded-xl overflow-hidden mb-3 border border-slate-800">
               <Image
                 src={selectedPhoto.imageUrl}
                 alt={selectedPhoto.title}
@@ -122,8 +121,8 @@ export default function GalleryPage() {
               />
             </div>
 
-            <p className="text-sm text-slate-300 leading-relaxed">
-              {selectedPhoto.description}
+            <p className="text-sm font-semibold tracking-wider text-blue-400">
+              #CARGOSENT
             </p>
           </div>
         </div>

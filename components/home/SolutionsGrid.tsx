@@ -16,9 +16,9 @@ export default function SolutionsGrid() {
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Comprehensive Multimodal Forwarding
           </h2>
-          <p className="mt-4 text-base text-slate-600 leading-relaxed">
-            Tailored logistics infrastructure engineered for global scale, speed-critical
-            consignments, and complex supply chain corridors.
+          <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            Tailored logistics infrastructure engineered for global scale, speed-critical consignments,
+            <br className="hidden sm:inline" /> and complex supply chain corridors.
           </p>
         </div>
 

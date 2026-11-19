@@ -21,8 +21,9 @@ export default function HighlightsPreview() {
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Latest Highlights
           </h2>
-          <p className="mt-3 text-sm text-slate-600 max-w-2xl mx-auto">
-            Behind the scenes of complex, high-stakes End-to-End cargo handling from ocean, air, road to event venues.
+          <p className="mt-3 text-sm text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Behind the scenes of complex, high-stakes End-to-End cargo handling from ocean, air, road
+            <br className="hidden sm:inline" /> to event venues.
           </p>
         </div>
 
@@ -80,12 +81,11 @@ export default function HighlightsPreview() {
               <X className="w-5 h-5" />
             </button>
 
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-3">
               {selectedPhoto.categoryLabel}
             </span>
-            <h3 className="text-xl font-bold mb-4">{selectedPhoto.title}</h3>
 
-            <div className="relative h-96 w-full rounded-xl overflow-hidden mb-4 border border-slate-800">
+            <div className="relative h-96 w-full rounded-xl overflow-hidden mb-3 border border-slate-800">
               <Image
                 src={selectedPhoto.imageUrl}
                 alt={selectedPhoto.title}
@@ -94,8 +94,8 @@ export default function HighlightsPreview() {
               />
             </div>
 
-            <p className="text-sm text-slate-300 leading-relaxed">
-              {selectedPhoto.description}
+            <p className="text-sm font-semibold tracking-wider text-blue-400">
+              #CARGOSENT
             </p>
           </div>
         </div>
