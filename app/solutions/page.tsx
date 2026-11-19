@@ -33,7 +33,7 @@ export default function SolutionsPage() {
 
       {/* Quick Jump Anchor Bar */}
       <div className="sticky top-20 z-40 bg-slate-100 border-b border-slate-200 py-3 overflow-x-auto shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-x-3 sm:space-x-4 min-w-max">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center flex-wrap gap-2 sm:gap-3">
           {solutionsData.map((sol) => (
             <a
               key={sol.id}

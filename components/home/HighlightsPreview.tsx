@@ -21,9 +21,8 @@ export default function HighlightsPreview() {
           <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Latest Highlights
           </h2>
-          <p className="mt-3 text-sm text-slate-600">
-            Authentic operational photography from our Shanghai airside ramp handovers, maritime
-            crane lifts, and race circuit logistics.
+          <p className="mt-3 text-sm text-slate-600 max-w-2xl mx-auto">
+            Behind the scenes of complex, high-stakes End-to-End cargo handling from ocean, air, road to event venues.
           </p>
         </div>
 

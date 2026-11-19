@@ -19,7 +19,7 @@ export default function MetricsBar() {
   };
 
   return (
-    <section className="relative z-20 -mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative z-20 mt-8 sm:mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 sm:p-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
           {metricsData.map((item, idx) => (

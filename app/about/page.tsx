@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Cargosent Logistics Solutions",
+  title: "About Us | Cargosent Logistics",
   description:
     "Learn about Cargosent, a specialist Freight Forwarder established in 2017 based in Shanghai, China.",
 };
@@ -30,7 +30,7 @@ export default function AboutPage() {
             Established 2017 in Shanghai, China
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            About Cargosent Logistics Solutions
+            About Cargosent Logistics
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
             More than moving cargo from A to B. We care about your cargo, support your business

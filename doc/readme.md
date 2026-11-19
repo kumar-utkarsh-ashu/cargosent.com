@@ -85,3 +85,9 @@ Every change and development phase adheres strictly to the IMET framework:
   3. Preserved clean photo cards in Highlights without overlay clutter per earlier client directive.
   4. Verified consistent phone (+86 138 1829 2991) and email (info@cargosent.com) in all restored components.
   5. Tested production build and verified all routes return HTTP 200. Verified ASCII compliance.
+- Version 9.0.0 (2026-11-19): Precision UI refinements per client review:
+  1. Solutions Quick Jump Bar: Center-aligned the horizontal anchor pills (Air Freight, Ocean Freight, Road Freight, Events and Motorsports, Warehousing, Railway Freight) on app/solutions/page.tsx.
+  2. About Page Title: Pruned "Solutions" from the hero heading on app/about/page.tsx to read "About Cargosent Logistics".
+  3. Metrics Bar Spacing: Adjusted the MetricsBar position downward to eliminate negative margin overlap (-mt-12), ensuring full visibility and breathing room for the Hero Slider pagination dots.
+  4. Highlights Subtitle: Updated subtext under Latest Highlights on components/home/HighlightsPreview.tsx and app/gallery/page.tsx to "Behind the scenes of complex, high-stakes End-to-End cargo handling from ocean, air, road to event venues."
+  5. Build and Route Verification: Passed production build verification with 0 errors and confirmed HTTP 200 across all routes. Verified ASCII compliance.
